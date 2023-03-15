@@ -1,0 +1,16 @@
+#+PHPVersion
+#="php81"
+AddHandler x-httpd-php81 .php
+#-PHPVersion
+
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /metro
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?rot=$1 [L]
+
+

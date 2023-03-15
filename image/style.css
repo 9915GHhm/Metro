@@ -1,0 +1,136 @@
+html {
+	background: url(../image/fondo.jpg);
+	/*color: #212121;*/
+	font-size: 16px;
+}
+
+.container{
+	width: 85%;
+	max-width: 1500px;
+	background: #fff url(../image/11.png);
+	margin: 80px auto;
+	border-radius: 1%;
+	/*margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;*/
+}
+
+header{
+	width: 100%;
+	background: #565454;
+	color: #fff;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+header hgroup{
+	width: 100%;
+	margin-left: 70%;
+	margin-top: 1%;
+	border-radius: 1%;
+}
+
+/*img{
+	width: 100px;
+	margin-right: 1%;
+	margin-top: 1%;
+}
+*/
+
+footer{
+	margin-top: 4em;
+	padding: 2em;
+	width: 100%;
+	background: #565454;
+	color: #fff;
+}
+
+input{ color: #141414; }
+
+label{ color: #E50914; }
+
+table{
+	width: 100%;
+	color: #141414;
+}
+
+table td, table th{ padding: .50rem; }
+
+table tr:first-child{
+	background-color: #E50914;
+	color: #FFF;
+}
+
+table tr:nth-child(even){ background-color: #666; }
+
+table tr:nth-child(odd):not(:first-child){ background-color: #999; }
+
+section{
+	width: 70%;
+	margin: 0 auto; /* ó así (margin: 0 auto 0 auto;) */
+}
+
+.button,
+.button:hover,
+.button:focus {
+    padding: .5rem 1rem;
+	cursor: pointer;
+	font-weight: bold; 
+}
+
+.button:hover{ opacity: .75; }
+
+.add{ background-color: #0B0; }
+
+.date{ 
+    font-weight:bold;
+	cursor: pointer; 
+}
+
+.text{ 
+	font-size:35px;
+    font-family:helvetica;
+    font-weight:bold;
+    color:#B22222;
+    text-transform:uppercase;
+ }
+
+.select{
+  font-weight:bold;
+  color:#141414;
+  text-transform:uppercase;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+   0% { opacity: 1.0; }
+  10% { opacity: 0.0; }
+  50% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+   0% { opacity: 1.0; }
+  10% { opacity: 0.0; }
+  50% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+   0% { opacity: 1.0; }
+  10% { opacity: 0.0; }
+  50% { opacity: 1.0; }
+}
+
+
+
+
