@@ -230,6 +230,10 @@ header, section#contenido, footer {
 	text-align: center;
 }
 
+aside#cuadro{
+	border-radius: 10px;
+}
+
 header h1, nav {
 	display: inline-block;
 	max-width: 100%;
@@ -296,6 +300,7 @@ section#principal, aside {
 	max-width: 100%;
 	padding: 0.25em;
 	vertical-align: top;
+	border-radius: 10px;
 	width: 65%;
 }
 

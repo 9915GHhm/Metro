@@ -24,7 +24,7 @@ print('
           </div>
         </article>
         </section>
-      <aside><br><br>
+      <aside id="cuadro"><br><br>
         <h3>Sí estás registrado aquí, puedes hacer<br>
             consultas de las tablas de servicio de<br>
             rotación del Metro de Caracas, y sí no<br>
