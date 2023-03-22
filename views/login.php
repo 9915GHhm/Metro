@@ -32,27 +32,27 @@ print('
    <form method="POST" class="item">
        <div class = "p_25">
         <label class= "p1"><b>usuario:</b></label>
-        <input type = "text" name = "us" placeholder = "usuario" required>
+        <input type="text" name="us" placeholder="usuario" required>
    </div>
      <div class = "p_25">
         <label class= "p1" for="password"><b>contraseña:</b></label>
-        <input type = "password" name = "pass" placeholder = "password" required id="contrasena">
+        <input type="password" name="pass" placeholder="password" required id="contrasena">
    </div>
    <div>
         <input type="checkbox" id="mostrar_contrasena" title="clic para mostrar contraseña"/><label class= "p1" for="password">&nbsp;Ver contraseña</label>
    </div><br>
    <div class = "p_25">
-        <label id="p2"><b><a href = "registro">Registrarse</a></b></label>
+        <label id="p2"><b><a href="registro">Registrarse</a></b></label>
    </div>
    <div class = "p_25">
-        <input type = "submit" class = "button" value = "INGRESAR">
+        <input type="submit" class="button" value="INGRESAR">
    </div><br>
    ');
 
        if( isset($_GET['error']) ){
   $template = '
-     <div class= "container">
-         <h4 class= "item edit">El Usuario <mar><b>%s</b></mark> y/o contraseña no coinciden</h4>
+     <div class="container">
+         <h4 class="item edit">El Usuario <mar><b>%s</b></mark> y/o contraseña no coinciden</h4>
      </div>
      <script>
           window.onload = function(){
@@ -62,6 +62,35 @@ print('
   ';  
   printf($template, $_GET['error']);
   
+}
+
+if( isset($_GET['error2']) ){
+  $template = '
+     <div class="container">
+         <h4 class="item edit">%s</h4>
+     </div>
+     <script>
+          window.onload = function(){
+        reloadPage("./")
+      }
+     </script>
+  '; 
+  printf($template, $_GET['error2']);
+  
+}
+
+  if( isset($_GET['error3'])){
+  $template = '
+     <div class="container">
+         <h4 class="item edit">%s</h4>
+     </div>
+     <script>
+          window.onload = function(){
+        reloadPage("./")
+      }
+     </script>
+  ';  
+  printf($template, $_GET['error3']);  
 }
         print('
    </form>

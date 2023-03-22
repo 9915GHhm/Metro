@@ -17,16 +17,28 @@ class UsersController{
 		return $this->model->setu($user_data);    // para ser actualizados en la "DDBB".
 	}
 	
-	public function get($user_id = ''){  // Método que obtiene los datos desde la clase "UsersModels".
+	public function get($user_id = ''){  // Obtiene los datos desde la clase "UsersModels".
 		return $this->model->get($user_id);
 	}
 	
-	public function del( $user_id = '' ){ // Método que envia los datos a eliminar a la clase "UsersModels".
+	public function del( $user_id = '' ){ // Envia los datos a eliminar a la clase "UsersModels".
 		return $this->model->del($user_id);
 	}
 
-	public function saber_dia(){ // Método que verifica la condición de las tablas a verificar.
+	public function saber_dia(){ // Verifica la condición de las tablas según fecha y día de la semana.
         return $this->model->saber_dia($this->date, $this->num, $this->table);
+	}
+
+	public function nroIntentos($us = ''){ // Obtener el números de intentos hechos al logearse.
+		return $this->model->attempts($us);
+	}
+
+	public function setIntentos($us_data = array()){ // Actualiza los intentos al logearse.
+		return $this->model->setAttempts($us_data);
+	}
+
+	public function resetIntentos($us_data = array()){ // Resetea la columna "intentos" en la DDBB.
+		return $this->model->resetAttemps($us_data);
 	}
 
 	public function noEmail($email){ // Método que verifica sí el Email es valdo.

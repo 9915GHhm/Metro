@@ -11,7 +11,13 @@ class SessionController{
 	}
 	
 	public function login($us, $pass){//Método que valida el usuario y contraseña en la clase "UsersModels".
-		return $this->session->validate_user($us, $pass);
+
+	     $data = array();
+	     $data = $this->session->validate_user($us, $pass);
+	     if(isset($data)){   
+	     	$this->session->resetAttemps($us, $pass);
+	     }
+		return $data;
 	}
 	
 	public function logout(){ // Método que cierra la sección.

@@ -1,8 +1,3 @@
-#+PHPVersion
-#="php81"
-AddHandler x-httpd-php81 .php
-#-PHPVersion
-
 Options +FollowSymlinks
 RewriteEngine On
 

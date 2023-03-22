@@ -9,7 +9,7 @@ $table = 0;
 $users_controller = new UsersController($date, $num, $table);
 if($_SESSION['role'] == 'Admin'){
 $users = $users_controller->get();
-
+//var_dump($users);
 print('<label class= "p1"><b>GESTIÓN DE USUARIOS</b></label>');
 if( empty($users) ){
 	print('
@@ -27,8 +27,8 @@ if( empty($users) ){
 			 <th>Nombre</th>
 			 <th>Tabla</th>
 			 <th>Rol</th>
-			 <th colspan= "2">
-			 </th>
+			 <th>Editar</th>
+			 <th>Eliminar</th>
 	      </tr>';
 	for($n=0; $n<count($users); $n++){
 		$template_users .= '
@@ -88,34 +88,34 @@ if( empty($users) ){
 		$role_user = ($user[0]['role'] == 'User') ? 'checked' : '';
 		$template_user = '
 		    <label class= "p1"><b>Editar Usuario / Eliminar suscripción</b></label>
-		    <form method= "POST">
+		    <form method= "POST" class= "itemusers">
 		        <div class= "p_25">
 		             <input type= "text" placeholder= "usuario" value= "%s" disabled required>
 			       <input type= "hidden" name= "us" value= "%s">
 		         </div>
 		         <div class= "p_25">
-		              <input type= "hidden" name= "email" placeholder= "email" value= "%s" required>
+		              <input type="hidden" name="email" value="%s">
 		         </div>
 		         <div class= "p_25">
-		              <input type= "text" name= "name" value= "%s">
+		              <input type="text" name="name" value="%s">
 		         </div>
 		         <div class= "p_25">
-		              <input type= "text" name= "tabla" value= "%s">
+		              <input type="text" name="tabla" value="%s">
 		         </div>
 		         <div class= "p_25">
-			      <input type= "hidden" name= "role" id= "noadmin" value= "User" %s required><label for= "noadmin"></label>
+			      <input type="hidden" name="role" id="noadmin" value="User" %s required><label for= "noadmin"></label>
 		         </div>
 			    <div class= "p_25">
 			       <form method="POST">
-				    <input type= "hidden" name= "us" value= "' . $user[0]['us'] . '">
-		            <input class= "button edit"  type= "submit" value= "Editar">
-		            <input type= "hidden" name= "crud" value= "setu">
-				    <input class= "button cancel" type= "button" value= "Cancelar" onclick= "history.back()">	
+				    <input type="hidden" name="us" value="' . $user[0]['us'] . '">
+		            <input class="button edit"  type="submit" value="Editar">
+		            <input type="hidden" name="crud" value="setu">
+				    <input class="button cancel" type="button" value="Cancelar" onclick="history.back()">	
 				    </form>
 			      <form method= "POST"><br>
-				     <input type= "hidden" name= "rot" value= "user-delete">
-				     <input type= "hidden" name= "us" value= "' . $user[0]['us'] . '">
-				     <input class= "button delete" type= "submit" value= "Eliminar">
+				     <input type="hidden" name="rot" value="user-delete">
+				     <input type="hidden" name="us" value="' . $user[0]['us'] . '">
+				     <input class="button delete" type="submit" value="Eliminar">
                   </form>				   
 		         </div>
             </form>		   

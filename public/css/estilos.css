@@ -112,8 +112,27 @@ h3.di{
 }
 
 h4 {
-	color: darkred;
+	background: #B22222;
+	border-radius: 0.25em;
+	font-size: 0.75em;
+	padding: .40em;
+	color: white;
 	font-family: Helvetica, Verdana;
+}
+
+h2.condition{
+
+    margin-left: 34%;
+	background: #F91005;
+	border-radius: 1em;
+	font-size: 1.25em;
+	padding: .70em;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 2px #660066;
+	max-width: 30%;
+	font-family: Helvetica, Verdana;
+
 }
 
 div#better{
@@ -375,6 +394,12 @@ article.abc{
 aside.bc{
 	max-width: 70%;
 	text-align: center;
+	width: 100%;
+}
+
+form.itemusers{
+	max-width: 45%;
+	margin-left: 16em;
 	width: 100%;
 }
 /*---------------------------------Menú----------------------*/
